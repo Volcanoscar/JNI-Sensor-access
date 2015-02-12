@@ -1,0 +1,102 @@
+package com.example.hellogooglemaps;
+
+import com.google.android.gms.common.ConnectionResult;
+import com.google.android.gms.common.api.GoogleApiClient;
+import com.google.android.gms.common.api.GoogleApiClient.ConnectionCallbacks;
+import com.google.android.gms.common.api.GoogleApiClient.OnConnectionFailedListener;
+import com.google.android.gms.location.LocationListener;
+import com.google.android.gms.location.LocationRequest;
+import com.google.android.gms.location.LocationServices;
+
+import android.support.v7.app.ActionBarActivity;
+import android.app.Activity;
+import android.location.Location;
+import android.os.Bundle;
+import android.util.Log;
+import android.view.Menu;
+import android.view.MenuItem;
+import android.view.View;
+import android.widget.Toast;
+
+public class MainActivity extends Activity  implements
+GoogleApiClient.ConnectionCallbacks,
+GoogleApiClient.OnConnectionFailedListener,
+LocationListener 
+
+{
+
+	private static final long UPDATE_INTERVAL = 1000;
+	private static final long FASTEST_INTERVAL = 500;
+
+    private GoogleApiClient mLocationClient;
+    private Location mCurrentLocation;
+    LocationRequest mLocationRequest;
+
+    protected void onCreate(Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+        setContentView(R.layout.activity_my);
+
+        mLocationClient = new GoogleApiClient.Builder(getApplicationContext())
+                                .addApi(LocationServices.API)
+                                .addConnectionCallbacks(this)
+                                .addOnConnectionFailedListener(this)
+                                 .build();
+
+
+        mLocationRequest = new LocationRequest();
+        mLocationRequest.setInterval(UPDATE_INTERVAL);
+        mLocationRequest.setPriority(LocationRequest.PRIORITY_HIGH_ACCURACY);
+
+        mLocationRequest.setFastestInterval(FASTEST_INTERVAL);
+
+    }
+
+    protected void onStart() {
+        super.onStart();
+        mLocationClient.connect();
+    }
+
+    protected void onStop() {
+        super.onStop();
+
+        LocationServices.FusedLocationApi.removeLocationUpdates(mLocationClient, this);
+
+        mLocationClient.disconnect();
+    }
+
+    public void onClick(View view) {
+
+        if (mCurrentLocation != null) {
+            Log.i("Location", mCurrentLocation.toString());
+
+        }else{
+            Log.i("Location", "nothing");
+
+        }
+
+    }
+
+    public void onLocationChanged(Location location) {
+        Log.d("Location Update", "CHANGED");
+        mCurrentLocation = location;
+    }
+
+    public void onConnected(Bundle bundle) {
+        // Display the connection status
+        Toast.makeText(this, "Connected", Toast.LENGTH_SHORT).show();
+        if(servicesConnected()) {
+            LocationServices.FusedLocationApi.requestLocationUpdates(mLocationClient, mLocationRequest, this);
+        }
+    }
+
+    public void onConnectionSuspended(int i) {
+        Toast.makeText(this, "Disconnected. Please re-connect.",
+                Toast.LENGTH_SHORT).show();
+    }
+
+	@Override
+	public void onConnectionFailed(ConnectionResult arg0) {
+		// TODO Auto-generated method stub
+		
+	}
+}

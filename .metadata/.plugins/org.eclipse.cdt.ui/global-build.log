@@ -1,0 +1,54 @@
+21:07:19 **** Build of configuration Default for project HelloJni ****
+/opt/android-sdk-linux/android-ndk-r10d/ndk-build all 
+Android NDK: WARNING: APP_PLATFORM android-21 is larger than android:minSdkVersion 8 in ./AndroidManifest.xml    
+[arm64-v8a] Compile        : hello-jni <= hello-jni.c
+[arm64-v8a] SharedLibrary  : libhello-jni.so
+[arm64-v8a] Install        : libhello-jni.so => libs/arm64-v8a/libhello-jni.so
+[x86_64] Compile        : hello-jni <= hello-jni.c
+[x86_64] SharedLibrary  : libhello-jni.so
+[x86_64] Install        : libhello-jni.so => libs/x86_64/libhello-jni.so
+[mips64] Compile        : hello-jni <= hello-jni.c
+[mips64] SharedLibrary  : libhello-jni.so
+[mips64] Install        : libhello-jni.so => libs/mips64/libhello-jni.so
+[armeabi-v7a] Compile thumb  : hello-jni <= hello-jni.c
+[armeabi-v7a] SharedLibrary  : libhello-jni.so
+[armeabi-v7a] Install        : libhello-jni.so => libs/armeabi-v7a/libhello-jni.so
+[armeabi] Compile thumb  : hello-jni <= hello-jni.c
+[armeabi] SharedLibrary  : libhello-jni.so
+[armeabi] Install        : libhello-jni.so => libs/armeabi/libhello-jni.so
+[x86] Compile        : hello-jni <= hello-jni.c
+[x86] SharedLibrary  : libhello-jni.so
+[x86] Install        : libhello-jni.so => libs/x86/libhello-jni.so
+[mips] Compile        : hello-jni <= hello-jni.c
+[mips] SharedLibrary  : libhello-jni.so
+[mips] Install        : libhello-jni.so => libs/mips/libhello-jni.so
+15:50:59 **** Build of configuration Default for project HelloJni ****
+/opt/android-sdk-linux/android-ndk-r10d/ndk-build all 
+Android NDK: WARNING: APP_PLATFORM android-21 is larger than android:minSdkVersion 8 in ./AndroidManifest.xml    
+[arm64-v8a] Install        : libhello-jni.so => libs/arm64-v8a/libhello-jni.so
+[x86_64] Install        : libhello-jni.so => libs/x86_64/libhello-jni.so
+[mips64] Install        : libhello-jni.so => libs/mips64/libhello-jni.so
+[armeabi-v7a] Install        : libhello-jni.so => libs/armeabi-v7a/libhello-jni.so
+[armeabi] Install        : libhello-jni.so => libs/armeabi/libhello-jni.so
+[x86] Install        : libhello-jni.so => libs/x86/libhello-jni.so
+[mips] Install        : libhello-jni.so => libs/mips/libhello-jni.so
+16:51:02 **** Incremental Build of configuration Default for project HelloJni ****
+/opt/android-sdk-linux/android-ndk-r10d/ndk-build all 
+Android NDK: WARNING: APP_PLATFORM android-21 is larger than android:minSdkVersion 8 in ./AndroidManifest.xml    
+[arm64-v8a] Install        : libhello-jni.so => libs/arm64-v8a/libhello-jni.so
+[x86_64] Install        : libhello-jni.so => libs/x86_64/libhello-jni.so
+[mips64] Install        : libhello-jni.so => libs/mips64/libhello-jni.so
+[armeabi-v7a] Install        : libhello-jni.so => libs/armeabi-v7a/libhello-jni.so
+[armeabi] Install        : libhello-jni.so => libs/armeabi/libhello-jni.so
+[x86] Install        : libhello-jni.so => libs/x86/libhello-jni.so
+[mips] Install        : libhello-jni.so => libs/mips/libhello-jni.so
+19:39:37 **** Incremental Build of configuration Default for project HelloJni ****
+/opt/android-sdk-linux/android-ndk-r10d/ndk-build all 
+Android NDK: WARNING: APP_PLATFORM android-21 is larger than android:minSdkVersion 8 in ./AndroidManifest.xml    
+[arm64-v8a] Install        : libhello-jni.so => libs/arm64-v8a/libhello-jni.so
+[x86_64] Install        : libhello-jni.so => libs/x86_64/libhello-jni.so
+[mips64] Install        : libhello-jni.so => libs/mips64/libhello-jni.so
+[armeabi-v7a] Install        : libhello-jni.so => libs/armeabi-v7a/libhello-jni.so
+[armeabi] Install        : libhello-jni.so => libs/armeabi/libhello-jni.so
+[x86] Install        : libhello-jni.so => libs/x86/libhello-jni.so
+[mips] Install        : libhello-jni.so => libs/mips/libhello-jni.so
